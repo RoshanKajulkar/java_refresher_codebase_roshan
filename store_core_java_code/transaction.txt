@@ -1,0 +1,4 @@
+Bill Id	User Name	Total Bill	TimeStamp
+35560	sanket		57000.0		2021-10-15T22:35:57.978
+5485	pavan		86000.0		2021-10-15T22:35:57.978
+2881	roshan		98000.0		2021-10-15T22:35:57.978
