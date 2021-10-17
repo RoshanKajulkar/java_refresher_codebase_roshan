@@ -1,0 +1,58 @@
+
+/*
+validation on register.html
+validation on resetpassword.html
+validation on forgotpassword.html
+book now must be an image now
+a video clip must be played while showing flights
+journey date must be the future date
+
+*/
+body {
+	background-image: url('airportx.jpeg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+h1 {
+	color:blue;
+	text-align: center;
+}
+
+h2 {
+	color:red;
+	text-align: center;
+}
+
+table {
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #FFFFE0;
+}
+
+#showflights {
+	margin-left: auto;
+	margin-right: auto;
+	background-color: orange;
+}
+
+#register {
+	margin-left: auto;
+	margin-right: auto;
+	background-color: green;
+}
+
+/*
+.mydiv {
+	background-color: red;
+}
+*/
+
+tR {
+	background-color: #ffffff;	
+}
+tH {
+	background-color: #BDB76B;
+}
+a {
+	text-align: center;
+}
