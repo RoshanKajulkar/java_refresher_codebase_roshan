@@ -1,0 +1,97 @@
+<html>
+<head>
+	<link rel="stylesheet" href="airline.css"> </link>
+	
+	<!-- 
+		<style>
+			h1 {
+				color:green;
+			}
+		</style>
+	-->
+	
+	
+	
+</head>
+
+
+	<body>
+		
+	<h1>Airline Reservation System</h1>
+	
+	<!--  
+	<h1>Airline Reservation System2 : page level color</h1>
+	<h1 style="color:blue">Airline Reservation System3 : tag specified color</h1>
+	-->
+	
+	<hl>
+	<h2> Search Flights </h2>
+	
+	<form action="ShowFlights.html">
+		<table>
+		<tr>
+			<td>Enter source </td> 		<td><input type=text name=source> </td>
+		</tr>
+		
+		<tr>
+			<td>Enter destination</td> 	<td><input type=text name=source> </td>
+		</tr>
+		
+		<tr>
+			<td>Enter journey date</td> <td><input type=date name=doj min="2021-10-10" id="date">  </td>
+		</tr>
+		
+		<tr>
+			<td><input  type=submit name=submit value="Search Flights"> </td>
+		</tr>
+		
+		</table>
+	</form>
+	
+	</body>
+	
+	<script>
+		let date = document.querySelector("#date")
+		let currentDateObj = new Date()
+		let currentDate = currentDateObj.getFullYear() + "-" + (currentDateObj.getMonth() + 1) + "-" + currentDateObj.getDate();
+	
+		date.setAttribute("min", currentDate);
+		
+	</script>
+</html>
+
+
+
+
+<!-- 
+	
+	
+					Java Technology
+							|
+				---------------------------
+				|			|			|
+			   JSE			JEE		   JME
+			   |			  |
+			 core java		----------------
+							|			|
+							WEB  	Enterprrise
+							|				|
+						---------		---------------------------
+						|		|		|		     |		   |
+						|		|		Session	  Entity	  JMS
+						static	dynamic stateless  stateful  message
+						|		|		Spring  hibernate    sms | mail
+						|	  REST API   REST
+						|
+						html (VIEW)
+						css  (STYLE)
+						js   (VALIDATION)
+						ajax (asynchronous java script with XML)
+						
+						
+					MODEL VIEW CONTROLLER
+					|		|		|
+					data	ajax	code
+						
+						
+ -->

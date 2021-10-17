@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+	<script>
+	/*
+	myemp1 = { employeeNumber:101,employeeName:"John",employeeSalary:5000 }
+		document.write(myemp1.employeeNumber+' ');
+		document.write(myemp1.employeeName+ ' ');
+		document.write(myemp1.employeeSalary);
+		
+		function showEmp() {
+			document.getElementById("empno").innerHTML=myemp1.employeeNumber;
+			document.getElementById("empname").innerHTML=myemp1.employeeName;
+			document.getElementById("empsal").innerHTML=myemp1.employeeSalary;
+		}
+		*/
+		fruits=["Mango","Apple","Orange"];
+		/*
+		for(i=0;i<fruits.length;i++) {
+			
+			document.write('<h3>'
+						+ 
+					fruits[i] + 
+				'</h3>');
+		}*/
+		//MVC
+		//CONTROLLER 
+		//REST API - DATA - MODEL -   CRUD 
+		//java script is acting as a VIEW
+		mystaff = [
+			{ employeeNumber:101,employeeName:"Bruce",employeeSalary:5000,empImg:'bruce.jpeg' },
+			{ employeeNumber:102,employeeName:"James",employeeSalary:6000,empImg:'james.jpeg' },
+			{ employeeNumber:103,employeeName:"Steve",employeeSalary:7000,empImg:'steve.jpeg' }
+		];
+		/*
+		document.write('<table border=5 cellspacing=10 cellpadding=10> '+	
+				'<thead>	<th>Emp No.</th>	<th>Employee Name</th>'+
+				'<th>Emp Salary</th>'+
+			'</thead>');
+		
+		for(i=0;i<mystaff.length;i++) {
+			document.write('<tr>');
+			
+			document.write('<td>'+mystaff[i].employeeNumber +'</td>');
+			document.write('<td>'+mystaff[i].employeeName +'</td>');
+			document.write('<td>'+mystaff[i].employeeSalary +'</td>');
+			document.write('<td> <img src='+mystaff[i].empImg +' height=200 width=300></td>');
+			document.write('</tr>');
+			
+		}
+		
+		document.write('</table>');
+		*/
+		
+		
+		const department = [
+			{
+					deptId: 1, 
+					deptName: "IT", 
+					location: "North block",
+					emp: [
+						{ employeeNumber:101,employeeName:"Bruce",employeeSalary:5000},
+						{ employeeNumber:102,employeeName:"James",employeeSalary:6336},
+					]
+			},
+			{
+					deptId: 2, 
+					deptName: "CS", 
+					location: "South block",
+					emp: [
+						{ employeeNumber:103,employeeName:"Karan",employeeSalary:5000},
+						{ employeeNumber:104,employeeName:"Sanket",employeeSalary:6000},
+					]
+			},
+			{
+					deptId: 3, 
+					deptName: "E&TC", 
+					location: "East block",
+					emp: [
+						{ employeeNumber:105,employeeName:"Roshan",employeeSalary:4444},
+						{ employeeNumber:106,employeeName:"Onkar",employeeSalary:4111},
+					]
+			},
+			{
+					deptId: 4, 
+					deptName: "MECHANICAL", 
+					location: "West block",
+					emp: [
+						{ employeeNumber:107,employeeName:"Julie",employeeSalary:2536},
+						{ employeeNumber:108,employeeName:"Mark",employeeSalary:520},
+					]
+			},
+			
+		]
+		
+		
+		document.write('<table border=5 cellspacing=10 cellpadding=10>')
+		document.write(`
+					<tr>
+						<td>Department Id</td>
+						<td>Department Name</td>
+						<td>Department Location</td>
+						<td>Employee Details</td>
+					</tr>
+			`)
+		for(let i=0; i<department.length; i++){
+			console.log(department[i])
+			let emp = department[i].emp
+			let empDetails = `
+				<table 
+					border=5 
+					cellspacing=10 
+					cellpadding=10
+				> 
+					<thead>	
+						<th>Emp No.</th>	
+						<th>Employee Name</th> 
+						<th>Emp Salary</th>
+					</thead>`
+					
+			for(let j = 0; j< emp.length; j++){
+				
+				empDetails = empDetails + `
+					<tr>
+						<td>${emp[j].employeeNumber}</td>
+						<td>${emp[j].employeeName}</td>
+						<td>${emp[j].employeeSalary}</td>
+					</tr>`
+			}
+			empDetails = empDetails + `</table>`
+			
+			
+			document.write(`
+					<tr>
+						<td>${department[i].deptId}</td>
+						<td>${department[i].deptName}</td>
+						<td>${department[i].location}</td>
+						<td>${empDetails}</td>
+					</tr>
+			`)
+		}
+		document.write('</table>')
+	</script>
+<body>
+<!-- 
+	<br>
+	Employee Number is <span id="empno"></span> <br>
+	Employee Name   is <span id="empname"></span> <br>
+	Employee Salary is <span id="empsal"></span> <br>
+	<button onclick="showEmp()">Show Employee</button>
+ -->
+	
+	
+</body>
+</html>
